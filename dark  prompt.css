@@ -1,0 +1,143 @@
+/* Global Layout */
+body {
+  background: #000;
+  color: #33ff33;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding: 40px 10px;
+  overflow-x: hidden;
+}
+
+/* Terminal Wrapper */
+.terminal {
+  background: #111;
+  padding: 20px;
+  border: 2px solid #33ff33;
+  width: 650px;
+  max-width: 95%;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #33ff33;
+}
+
+/* Chat Area */
+#chat-box {
+  height: 300px;
+  overflow-y: auto;
+  background: #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #33ff33;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Input Box */
+#input,
+#passphrase,
+#twofacode {
+  width: 100%;
+  padding: 8px;
+  background: #000;
+  color: #33ff33;
+  border: 1px solid #33ff33;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #33ff33;
+}
+
+/* Button Styling */
+button {
+  background: #000;
+  color: #33ff33;
+  border: 1px solid #33ff33;
+  padding: 5px 10px;
+  margin: 3px;
+  cursor: pointer;
+  font-family: monospace;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: #33ff33;
+  color: #000;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Alert Text */
+.alert {
+  color: red;
+  font-weight: bold;
+  animation: blink 0.6s step-start infinite;
+  margin-top: 10px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Canvas Styling */
+canvas {
+  background: black;
+  border: 1px solid #33ff33;
+  margin-top: 5px;
+}
+
+/* QR Panel */
+#qr-panel {
+  border: 1px solid #33ff33;
+  padding: 10px;
+  background: #000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#qrcode canvas {
+  margin: 0 auto;
+}
+
+/* Modal (2FA) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #111;
+  color: #33ff33;
+  border: 2px solid #33ff33;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #33ff33;
+  text-align: center;
+}
